@@ -622,7 +622,7 @@
         "line-join": "bevel"
       },
       "paint": {
-        "line-color": "#c8b79f",
+        "line-color": "#c7a978",
         "line-dasharray": [
           1,
           1
@@ -762,7 +762,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "#e2ddd5",
+        "line-color": "#d99a9a",
         "line-dasharray": [
           0.28,
           0.14
@@ -939,7 +939,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#f2c14e",
+        "line-color": "#f2a93b",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -979,7 +979,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#f6d65b",
         "line-width": {
           "base": 1.4,
           "stops": [
@@ -1018,7 +1018,7 @@
         "line-join": "round"
       },
       "paint": {
-        "line-color": "#e9958c",
+        "line-color": "#e85d5d",
         "line-offset": 0,
         "line-width": {
           "base": 1.4,
@@ -1282,7 +1282,7 @@
         "line-join": "miter"
       },
       "paint": {
-        "line-color": "#d0cbc4",
+        "line-color": "#d0a9a9",
         "line-gap-width": {
           "base": 1.55,
           "stops": [
