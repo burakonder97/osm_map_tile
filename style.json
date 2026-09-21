@@ -1,3 +1,4 @@
+```json
 {
   "version": 8,
   "name": "Basic",
@@ -656,10 +657,9 @@
           "LineString"
         ],
         [
-          "in",
+          "==",
           "class",
-          "minor",
-          "service"
+          "minor"
         ]
       ],
       "layout": {
@@ -678,6 +678,47 @@
             [
               20,
               30
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "road_service",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "class",
+          "service"
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-color": "#ffffff",
+        "line-opacity": 0.12,
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              13,
+              0.3
+            ],
+            [
+              20,
+              8
             ]
           ]
         }
@@ -1827,3 +1868,4 @@
   ],
   "sprite": "https://panoramax.openstreetmap.fr/pmtiles/styles/basic/sprite"
 }
+```
