@@ -643,86 +643,96 @@
       }
     },
     {
-      "id": "road_minor",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "minzoom": 13,
-      "filter": [
-        "all",
+  "id": "road_minor",
+  "type": "line",
+  "source": "openmaptiles",
+  "source-layer": "transportation",
+  "minzoom": 13,
+  "filter": [
+    "all",
+    [
+      "==",
+      "$type",
+      "LineString"
+    ],
+    [
+      "in",
+      "class",
+      "minor",
+      "service"
+    ]
+  ],
+  "layout": {
+    "line-cap": "round",
+    "line-join": "round"
+  },
+  "paint": {
+    "line-color": [
+      "match",
+      [
+        "get",
+        "class"
+      ],
+      "service",
+      "#e5e1dc",
+      "minor",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "line-opacity": [
+      "match",
+      [
+        "get",
+        "class"
+      ],
+      "service",
+      0.25,
+      "minor",
+      1,
+      1
+    ],
+    "line-width": [
+      "match",
+      [
+        "get",
+        "class"
+      ],
+      "service",
+      [
+        "interpolate",
         [
-          "==",
-          "$type",
-          "LineString"
+          "linear"
         ],
         [
-          "==",
-          "class",
-          "minor"
-        ]
+          "zoom"
+        ],
+        13,
+        0.3,
+        16,
+        0.6,
+        20,
+        2
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-width": {
-          "base": 1.55,
-          "stops": [
-            [
-              4,
-              0.25
-            ],
-            [
-              20,
-              30
-            ]
-          ]
-        }
-      }
-    },
-    {
-      "id": "road_service",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "transportation",
-      "minzoom": 13,
-      "filter": [
-        "all",
+      "minor",
+      [
+        "interpolate",
         [
-          "==",
-          "$type",
-          "LineString"
+          "linear"
         ],
         [
-          "==",
-          "class",
-          "service"
-        ]
+          "zoom"
+        ],
+        13,
+        0.5,
+        16,
+        1.5,
+        20,
+        8
       ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round"
-      },
-      "paint": {
-        "line-color": "#ffffff",
-        "line-opacity": 0.12,
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              13,
-              0.3
-            ],
-            [
-              20,
-              8
-            ]
-          ]
-        }
-      }
-    },
+      1
+    ]
+  }
+},
     {
       "id": "tunnel_minor",
       "type": "line",
